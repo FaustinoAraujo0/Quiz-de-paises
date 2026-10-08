@@ -75,9 +75,9 @@ for (var i = 0; i <= 3; i++) {
         resquiz[m] = paises[resquizrandom].capital
     }else {
         random = Math.floor(Math.random() * 54)
-        if (random == resquizrandom) {
+        do {
             random = Math.floor(Math.random() * 54)
-        }
+        }while(random == resquizrandom)
         resquiz[i] = paises[random].capital
     }
 
@@ -92,6 +92,7 @@ btn_3.innerHTML = `${resquiz[2]}`
 btn_4.innerHTML = `${resquiz[3]}`
 
 function verificar (event) {
+    console.log("Função next executada com sucesso")
     console.log(event.target.innerText);
     console.log(paises[resquizrandom].capital);
 
@@ -120,6 +121,7 @@ function verificar (event) {
 }
 
 function next() {
+    console.log("Função next executada com sucesso")
     if (cont == 5) {
         localStorage.setItem("acertos", acertos);
 
