@@ -70,6 +70,11 @@ const paises = [
     { pais: "Zimbábue", capital: "Harare" }
 ]
 
+do {
+        random = Math.floor(Math.random() * 54)
+}while(random == resquizrandom)
+
+
 for (var i = 0; i <= 3; i++) {  
     if (i == m) {
         resquiz[m] = paises[resquizrandom].capital
